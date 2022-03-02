@@ -38,6 +38,7 @@ public class BalloonController : MonoBehaviour
         balloon.GetComponent<Rigidbody>().AddForce(Vector3.up * floatStrengh);
         GameObject.Destroy(balloon, 10f);
         balloon = null;
+
     }
 
     public void CreateBalloon(GameObject parentHand)
