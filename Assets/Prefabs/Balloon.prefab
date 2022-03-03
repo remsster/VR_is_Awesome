@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5906797915632619766}
   - component: {fileID: 3195330868366174648}
   - component: {fileID: 8243273222868293155}
+  - component: {fileID: 7410929480756285098}
   m_Layer: 0
   m_Name: Balloon
   m_TagString: Untagged
@@ -77,6 +78,19 @@ CapsuleCollider:
   m_Height: 0.34048235
   m_Direction: 1
   m_Center: {x: 0, y: 0.123429954, z: 0}
+--- !u!114 &7410929480756285098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5906797915632619761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cfa7fc6ca6f6a1449f065e6119b6501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popEffectPrefab: {fileID: 100010, guid: f1360d85a2201864499edb1a9a1330f7, type: 3}
 --- !u!1001 &5906797915445278315
 PrefabInstance:
   m_ObjectHideFlags: 0
