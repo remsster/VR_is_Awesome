@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class KillTarget : MonoBehaviour
 {
@@ -10,13 +9,18 @@ public class KillTarget : MonoBehaviour
     public float timeToSelect = 3.0f;
     public int score;
 
+    public TextMeshProUGUI scoreText;
+
     private new Transform camera;
     private float countDown;
+
+
 
     private void Start()
     {
         camera = Camera.main.transform;
         score = 0;
+        scoreText.text = "Score: 0";
         countDown = timeToSelect;
     }
 
@@ -43,9 +47,12 @@ public class KillTarget : MonoBehaviour
             else
             {
                 // Killed
-                Instantiate(killEffect, target.transform.position, target.transform.rotation);
+                GameObject clone = Instantiate(killEffect, target.transform.position, target.transform.rotation);
                 score += 1;
+                scoreText.text = $"Score: {score}";
                 countDown = timeToSelect;
+                Destroy(clone, 3f);
+                
                 SetRandomPosition();
             }
         }
